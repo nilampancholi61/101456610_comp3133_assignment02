@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
+  loginForm: FormGroup | undefined;
   
   constructor(private fb: FormBuilder, private router: Router) { }
   
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.loginForm.valid) {
+    if (this.loginForm?.valid) {
       // Call the authentication service (see next section)
       // Store the session token
       localStorage.setItem('authToken', 'dummy_token');

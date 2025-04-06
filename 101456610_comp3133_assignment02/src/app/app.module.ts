@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ApolloModule, Apollo } from 'apollo-angular';
-import { InMemoryCache } from '@apollo/client/core';
+import { HttpLink, InMemoryCache } from '@apollo/client/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
